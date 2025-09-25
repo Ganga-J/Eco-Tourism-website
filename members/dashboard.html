@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Your Website Name</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../img/logos/website-logo.png" alt="Your Website Name Logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../destinations/index.html">Destinations</a></li>
+                    <li><a href="../pages/about-us.html">About Us</a></li>
+                    <li><a href="../pages/our-sustainability-policy.html">Our Commitment</a></li>
+                    <li><a href="../pages/join-a-program.html">Join a Program</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li id="nav-auth-link"></li>
+                    <li><a id="logout-btn" href="#" class="btn btn-secondary" style="display: none;">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1 class="page-title">Welcome, <span id="member-name">[Member Name]</span>!</h1>
+            <p>Here’s a summary of your personal contributions and upcoming activities.</p>
+
+            <section class="impact-counter-section">
+                <h2 class="section-title">Your Personal Impact</h2>
+                <div class="impact-counters">
+                    <div class="counter-item">
+                        <span id="member-trees-counter" class="counter" data-target="0">0</span>
+                        <h3>Trees Planted</h3>
+                    </div>
+                    <div class="counter-item">
+                        <span id="member-waste-counter" class="counter" data-target="0">0</span>
+                        <h3>Lbs of Waste Collected</h3>
+                    </div>
+                    <div class="counter-item">
+                        <span id="member-carbon-counter" class="counter" data-target="0">0</span>
+                        <h3>Tons of CO2 Offset</h3>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="log-activity-section">
+                <h2 class="section-title">Log Your Latest Impact</h2>
+                <p>Did you plant a tree? Collect some waste? Record your latest effort here!</p>
+                <button id="log-tree-btn" class="btn btn-primary">I Planted a Tree!</button>
+                <div id="log-activity-feedback"></div>
+            </section>
+
+            <hr>
+
+            <section class="dashboard-sections">
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h2>Your Certifications</h2>
+                        <p>View the badges and certifications you have earned.</p>
+                        <div class="badge-grid" id="badge-grid">
+                            <div class="badge-item">
+                                <img src="../img/icons/badge-placeholder.svg" alt="Badge Placeholder">
+                                <p>Loading...</p>
+                            </div>
+                        </div>
+                        <a href="profile.html" class="btn btn-secondary">View My Profile</a>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2>Upcoming Adventures</h2>
+                        <p>You have an upcoming trip to the Amazon Rainforest.</p>
+                        <div class="upcoming-trip" id="upcoming-trip">
+                            <img src="../img/destinations/amazon/thumbnail.jpg" alt="Amazon Rainforest">
+                            <div class="trip-details">
+                                <h3>Amazon Rainforest Expedition</h3>
+                                <p><strong>Date:</strong> October 20-27, 2025</p>
+                                <p><strong>Status:</strong> Confirmed</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-link">Manage Trip</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <p>Leading the way in sustainable tourism, one adventure at a time. We believe travel should benefit
+                        both people and the planet.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../pages/our-sustainability-policy.html">Our Commitment</a></li>
+                        <li><a href="../pages/faqs.html">FAQs</a></li>
+                        <li><a href="../pages/contact.html">Contact Us</a></li>
+                        <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><img src="../img/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="../img/icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="../img/icons/twitter.svg" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Your Website Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBGoT_a2WGGt9YbTJvbq-g-ex2xSgX7jVM",
+            authDomain: "eco-tourism-adcc8.firebaseapp.com",
+            projectId: "eco-tourism-adcc8",
+            storageBucket: "eco-tourism-adcc8.firebasestorage.app",
+            messagingSenderId: "496827688591",
+            appId: "1:496827688591:web:cb1735476c4c20dedaf2fa",
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="../js/firebase-auth.js"></script>
+    <script src="../js/charts.js"></script>
+</body>
+
+</html>

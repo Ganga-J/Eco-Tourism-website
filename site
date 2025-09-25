@@ -1,0 +1,35 @@
+eco-tourism-website/
+├── css/
+│   ├── style.css
+│   └── components.css
+├── js/
+│   ├── main.js
+│   └── charts.js
+├── img/
+│   ├── heroes/
+│   │   └── homepage-hero.jpg
+│   ├── destinations/
+│   │   ├── amazon/
+│   │   │   └── main.jpg
+│   ├── icons/
+│   │   └── social-media.svg
+│   └── logos/
+│       └── website-logo.png
+├── blog/
+│   ├── how-to-travel-sustainably.html
+│   └── our-latest-impact-report.html
+├── destinations/
+│   ├── the-amazon.html
+│   ├── fiji-reef-project.html
+│   └── kenyan-savanna.html
+├── members/
+│   ├── dashboard.html
+│   └── profile.html
+├── pages/
+│   ├── about-us.html
+│   ├── contact.html
+│   ├── our-sustainability-policy.html
+│   ├── join-a-program.html
+│   └── login.html
+├── index.html
+└── favicon.icon
