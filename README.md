@@ -64,4 +64,5 @@ The project's file structure is organized to be clean and manageable:
 5. Deployment & Updates
 The website has been successfully deployed using Firebase Hosting.
 
-Live Website URL: https://github.com/Ganga-J/Eco-Tourism-website.git
+Live Website URL: [https://github.com/Ganga-J/Eco-Tourism-website.git
+](https://eco-tourism-adcc8.web.app/)
